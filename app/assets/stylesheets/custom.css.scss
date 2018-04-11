@@ -19,9 +19,6 @@ body {
 /* navbar */
 
 .navbar-list  {
-  position: fixed;
-	top: 0;
-	left: 0;
 	width: 100%;
 }
 
@@ -33,7 +30,46 @@ body {
   margin-right: 3%;
 }
 
+/* side_menu */
+
+.side-menu  {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding-right: 3em;
+}
+
+.side-menu li {
+  font-size: 2em;
+  border-bottom: 1px solid #B3B3B3;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.side-menu span {
+  font-size: 1.5em;
+}
+
+/* home */
+
+.home-photo  {
+  background-size: 800px 500px;
+  width: 800px;
+  height: 500px;
+  margin-top: 5em;
+  margin-left: 10em;
+  margin-right: auto;
+  box-shadow: 2em 2em 2em rgba(0,0,0,0.4);
+}
+
 /* content */
+
+.content-flex  {
+  display:-webkit-flex;
+  display:flex;
+  width:100%;
+  list-style-type:none;
+  margin:0; padding:0;
+}
 
 .content  {
   width: 90%;
@@ -43,6 +79,18 @@ body {
 
 .blog-content  {
   font-size: 2em;
+  border-bottom: 1px solid #B3B3B3;
+}
+
+.blog-content p {
+  font-family: "YuGothic M";
+  src: local("Yu Gothic Medium"),
+       local("Yu Gothic");
+  font-weight: 500;
+}
+
+.blog-title  {
+  border-bottom: 1px solid #B3B3B3;
 }
 
 /* accordion */
@@ -58,7 +106,7 @@ ul {
   margin-top: 5px;
   padding: 0.3em 1em;
   border: solid 1px #000;
-  box-shadow: 2px 2px rgba(0,0,0,0.4);
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 }
 
 .accordion-item:hover {
@@ -73,7 +121,7 @@ ul {
 }
 
 .question {
-  font-size: 1.3em;
+  font-size: 1em;
   margin: 0;
 }
 

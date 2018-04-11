@@ -1,0 +1,11 @@
+<div class="side-menu" style="flex:0 1 15%">
+  <ul>
+    <li>Article</li>
+    <% @blogs.each do |blog| %>
+    <span><%= link_to blog.title, blog %></span><br>
+    <% end %>
+    <li>Category</li>
+    <li>Calendar</li>
+    <li>Monthly</li>
+  </ul>
+</div>

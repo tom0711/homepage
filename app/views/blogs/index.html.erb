@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<div class="blog-content">
-<h1><%= link_to "Tom's BLOG", blogs_path %></h1>
-
+<div class="content-flex">
+  <%= render 'blogs/side_menu' %>
+<div class="blog-content" style="flex:0 1 80%">
+<h3><%= link_to "Tom's BLOG", blogs_path %></h3>
 <%= link_to 'New Blog', new_blog_path %>
 <section>
   <ul id="accordion mdl-list">
@@ -10,10 +11,10 @@
     <div>
       <li class="accordion-item mdl-list__item">
          <h3 class="question"><%= link_to blog.title, blog %></h3>
-         <span><%= time_ago_in_words(blog.created_at) %> ago.</span>
+         <span><%= l blog.created_at, format: :short %></span>
          <div class="answer">
             <p>
-              <%= blog.created_at %><br>
+              <%= l blog.created_at, format: :short %><br>
               <%= blog.content %>
             </p>
           </div>
@@ -26,6 +27,7 @@
 </ul>
 </section>
 <%= link_to 'New Blog', new_blog_path %>
+</div>
 </div>
 
 <%= javascript_include_tag 'accordion' %>
