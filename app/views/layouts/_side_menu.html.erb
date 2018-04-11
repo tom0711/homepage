@@ -4,8 +4,12 @@
     <% @blogs.each do |blog| %>
     <span><%= link_to blog.title, blog %></span><br>
     <% end %>
+    <a class="side-list" href="/blogs">Go to List</a>
     <li>Category</li>
-    
+    <% @categories.each do |category| %>
+    <span><%= link_to category.name, category %></span><br>
+    <% end %>
+    <a class="side-list" href="/categories">Go to List</a>
     <li>Calendar</li>
     <li>Monthly</li>
   </ul>

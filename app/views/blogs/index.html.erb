@@ -1,33 +1,31 @@
 <p id="notice"><%= notice %></p>
-
 <div class="content-flex">
-  <%= render 'blogs/side_menu' %>
-<div class="blog-content" style="flex:0 1 80%">
-<h3><%= link_to "Tom's BLOG", blogs_path %></h3>
-<%= link_to 'New Blog', new_blog_path %>
-<section>
-  <ul id="accordion mdl-list">
-    <% @blogs.each do |blog| %>
-    <div>
-      <li class="accordion-item mdl-list__item">
-         <h3 class="question"><%= link_to blog.title, blog %></h3>
-         <span><%= l blog.created_at, format: :short %></span>
-         <div class="answer">
-            <p>
-              <%= l blog.created_at, format: :short %><br>
-              <%= blog.content %>
-            </p>
-          </div>
-       </li>
-        <!-- <%= link_to 'Show', blog %> -->
-        <!-- <td><%= link_to 'Edit', edit_blog_path(blog) %></td> -->
-        <!-- <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-    <% end %>
-<br>
-</ul>
-</section>
-<%= link_to 'New Blog', new_blog_path %>
-</div>
+
+  <%= render 'layouts/side_menu' %>
+
+  <div class="blog-content" style="flex:0 1 80%">
+    <h3><%= link_to "Tom's BLOG", blogs_path %></h3>
+    <%= link_to 'New Blog', new_blog_path %>
+
+    <section>
+      <ul id="accordion mdl-list">
+        <% @blogs.each do |blog| %>
+        <div>
+          <li class="accordion-item mdl-list__item">
+            <h3 class="question"><%= link_to blog.title, blog %></h3>
+            <span><%= l blog.created_at, format: :short %></span>
+            <div class="answer">
+                <p><%= l blog.created_at, format: :short %><br>
+                <%= blog.content %></p>
+            </div>
+           </li>
+        <% end %>
+        <br>
+      </ul>
+    </section>
+
+    <%= link_to 'New Blog', new_blog_path %>
+  </div>
 </div>
 
 <%= javascript_include_tag 'accordion' %>
